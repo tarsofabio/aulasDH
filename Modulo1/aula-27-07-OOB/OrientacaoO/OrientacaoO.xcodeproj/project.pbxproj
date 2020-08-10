@@ -13,6 +13,7 @@
 		E59E91B424E081A7007B7B35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E59E91B224E081A7007B7B35 /* Main.storyboard */; };
 		E59E91B624E081AA007B7B35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E59E91B524E081AA007B7B35 /* Assets.xcassets */; };
 		E59E91B924E081AA007B7B35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E59E91B724E081AA007B7B35 /* LaunchScreen.storyboard */; };
+		E59E91C224E0DBB8007B7B35 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59E91C124E0DBB8007B7B35 /* Animal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E59E91B524E081AA007B7B35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E59E91B824E081AA007B7B35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E59E91BA24E081AA007B7B35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E59E91C124E0DBB8007B7B35 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		E59E91AB24E081A6007B7B35 /* OrientacaoO */ = {
 			isa = PBXGroup;
 			children = (
+				E59E91C024E0DB91007B7B35 /* Models */,
 				E59E91AC24E081A7007B7B35 /* AppDelegate.swift */,
 				E59E91AE24E081A7007B7B35 /* SceneDelegate.swift */,
 				E59E91B024E081A7007B7B35 /* ViewController.swift */,
@@ -65,6 +68,14 @@
 				E59E91BA24E081AA007B7B35 /* Info.plist */,
 			);
 			path = OrientacaoO;
+			sourceTree = "<group>";
+		};
+		E59E91C024E0DB91007B7B35 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E59E91C124E0DBB8007B7B35 /* Animal.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E59E91B124E081A7007B7B35 /* ViewController.swift in Sources */,
+				E59E91C224E0DBB8007B7B35 /* Animal.swift in Sources */,
 				E59E91AD24E081A7007B7B35 /* AppDelegate.swift in Sources */,
 				E59E91AF24E081A7007B7B35 /* SceneDelegate.swift in Sources */,
 			);
