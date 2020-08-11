@@ -12,13 +12,15 @@ class CalculadoraVC: BaseViewController {
 
     @IBOutlet weak var resultadoLabel: UILabel!
     @IBOutlet weak var calcView: CalculadoraView!
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var calcButton: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
        
-        self.setupView()
+        //self.setupView()
         
         // Do any additional setup after loading the view.
     }
@@ -30,8 +32,11 @@ class CalculadoraVC: BaseViewController {
     }
     
     override func setupView() {
-        self.calcView.setupView()
+        self.calcView.setupView(color: .gray)
         self.view.backgroundColor = .green
+        self.containerView.backgroundColor = .green
+        self.calcButton.backgroundColor = .red
+        self.calcButton.setTitleColor(.white, for: .normal)
     }
     
 }

@@ -108,7 +108,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="calcButton" destination="bbU-mH-vhW" id="S3B-TM-Bse"/>
                         <outlet property="calcView" destination="OuR-LW-Atp" id="Eqk-7a-fbK"/>
+                        <outlet property="containerView" destination="D3x-Qj-UgT" id="oZC-ML-BKS"/>
                         <outlet property="resultadoLabel" destination="R4e-T9-Jjk" id="QGh-P7-ySo"/>
                     </connections>
                 </viewController>
