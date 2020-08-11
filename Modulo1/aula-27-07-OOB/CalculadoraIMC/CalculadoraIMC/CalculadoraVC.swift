@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CalculadoraVC: UIViewController {
+class CalculadoraVC: BaseViewController {
 
     @IBOutlet weak var resultadoLabel: UILabel!
     @IBOutlet weak var calcView: CalculadoraView!
@@ -17,7 +17,8 @@ class CalculadoraVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.calcView.setupView()
+       
+        self.setupView()
         
         // Do any additional setup after loading the view.
     }
@@ -28,6 +29,10 @@ class CalculadoraVC: UIViewController {
         
     }
     
+    override func setupView() {
+        self.calcView.setupView()
+        self.view.backgroundColor = .green
+    }
     
 }
 
