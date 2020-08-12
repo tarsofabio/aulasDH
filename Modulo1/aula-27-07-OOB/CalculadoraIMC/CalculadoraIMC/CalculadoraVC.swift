@@ -27,12 +27,13 @@ class CalculadoraVC: BaseViewController {
 
     @IBAction func clicouCalcularButton(_ sender: UIButton) {
         
-        self.resultadoLabel.text = self.calcView.calcularIMC()
+        self.calcView.calcularIMC()
         
     }
     
     override func setupView() {
         self.calcView.setupView(color: .gray)
+        self.calcView.delegate = self
         self.view.backgroundColor = .green
         self.containerView.backgroundColor = .green
         self.calcButton.backgroundColor = .red
@@ -41,3 +42,13 @@ class CalculadoraVC: BaseViewController {
     
 }
 
+
+extension CalculadoraVC: CalculadoraViewProtocol {
+    func failureCalcIMC(msg: String) {
+        self.resultadoLabel.text = msg
+    }
+    
+    func successCalcIMC(value: String) {
+        self.resultadoLabel.text = value
+    }
+}
