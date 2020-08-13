@@ -13,6 +13,7 @@ protocol CalculadoraViewProtocol: class {
     
     func successCalcIMC(value: String)
     func failureCalcIMC(msg: String)
+    func calcIMC()
 }
 
 class CalculadoraView: UIView {
@@ -22,17 +23,24 @@ class CalculadoraView: UIView {
     @IBOutlet weak var alturaTextField: UITextField!
     
     weak var delegate: CalculadoraViewProtocol?
+    
     func setupView(color: UIColor) {
-        
         self.alturaTextField.placeholder = "Altura"
         self.pesoTextField.placeholder  = "Peso"
         self.backgroundColor = color
+        self.pesoTextField.delegate = self
+        self.alturaTextField.delegate = self
         
+        //coloca o foco no textField
+        self.alturaTextField.becomeFirstResponder()
+        
+        //tira o foco do textField
+        //self.alturaTextField.resignFirstResponder()
+    
     }
     
     
     func calcularIMC() {
-        
         
         let height: Float = Float(self.alturaTextField.text ?? "" ) ?? 0
         let weight: Float = Float(self.pesoTextField.text ?? "" ) ?? 0
@@ -70,3 +78,36 @@ class CalculadoraView: UIView {
     }
     
 }
+
+
+extension CalculadoraView: UITextFieldDelegate {
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+       
+        textField.backgroundColor = .red
+        
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+         textField.backgroundColor = .blue
+    }
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.backgroundColor = .white
+        
+        if textField == self.alturaTextField {
+            self.pesoTextField.becomeFirstResponder()
+        }else {
+            self.pesoTextField.resignFirstResponder()
+          //self.delegate?.calcIMC()
+            self.calcularIMC()
+        }
+        
+        
+        return true
+    }
+    
+}
+
+

@@ -14,6 +14,7 @@ class CalculadoraVC: BaseViewController {
     @IBOutlet weak var calcView: CalculadoraView!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var calcButton: UIButton!
+
     
     
     override func viewDidLoad() {
@@ -44,6 +45,11 @@ class CalculadoraVC: BaseViewController {
 
 
 extension CalculadoraVC: CalculadoraViewProtocol {
+    
+    func calcIMC() {
+        self.clicouCalcularButton(self.calcButton)
+    }
+    
     func failureCalcIMC(msg: String) {
         self.resultadoLabel.text = msg
     }
