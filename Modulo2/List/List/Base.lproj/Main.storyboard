@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="List" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RLm-Ix-Z09">
+                                <rect key="frame" x="20" y="134" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O5B-tj-REi">
+                                <rect key="frame" x="20" y="192" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fS5-Jr-DaE">
+                                <rect key="frame" x="20" y="261" width="374" height="30"/>
+                                <state key="normal" title="cadastrar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clicouCadastrar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VFA-R6-a4j"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RLm-Ix-Z09" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="09e-0F-BDi"/>
+                            <constraint firstItem="O5B-tj-REi" firstAttribute="trailing" secondItem="RLm-Ix-Z09" secondAttribute="trailing" id="MNE-EX-BSk"/>
+                            <constraint firstItem="O5B-tj-REi" firstAttribute="top" secondItem="RLm-Ix-Z09" secondAttribute="bottom" constant="24" id="OeV-sa-UKm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RLm-Ix-Z09" secondAttribute="trailing" constant="20" id="UsJ-eD-bnY"/>
+                            <constraint firstItem="fS5-Jr-DaE" firstAttribute="leading" secondItem="O5B-tj-REi" secondAttribute="leading" id="ZZI-id-MvV"/>
+                            <constraint firstItem="O5B-tj-REi" firstAttribute="leading" secondItem="RLm-Ix-Z09" secondAttribute="leading" id="dUN-zk-emC"/>
+                            <constraint firstItem="RLm-Ix-Z09" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="90" id="jB6-94-IL0"/>
+                            <constraint firstItem="fS5-Jr-DaE" firstAttribute="top" secondItem="O5B-tj-REi" secondAttribute="bottom" constant="35" id="jSx-XB-f7L"/>
+                            <constraint firstItem="fS5-Jr-DaE" firstAttribute="trailing" secondItem="O5B-tj-REi" secondAttribute="trailing" id="uNV-rr-X4w"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cadastrarButton" destination="fS5-Jr-DaE" id="W0G-of-t0H"/>
+                        <outlet property="produto2TextField" destination="O5B-tj-REi" id="Qrz-GL-6Lg"/>
+                        <outlet property="produtoTextField" destination="RLm-Ix-Z09" id="UHU-cx-g0r"/>
+                        <segue destination="RUT-Rj-k24" kind="presentation" identifier="produtoDetail" id="lWV-DH-bfK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="AAl-M3-eRz">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="RUT-Rj-k24" customClass="DetailViewController" customModule="List" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hc9-ni-mGS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RD7-kX-lN2">
+                                <rect key="frame" x="20" y="124" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xS8-19-uCg">
+                                <rect key="frame" x="312" y="66" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Fechar"/>
+                                <connections>
+                                    <action selector="clicouFechar:" destination="RUT-Rj-k24" eventType="touchUpInside" id="7XA-es-wcB"/>
+                                    <segue destination="BYZ-38-t0r" kind="showDetail" id="aSR-yn-3aD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOc-7c-72G">
+                                <rect key="frame" x="20" y="164" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="RD7-kX-lN2" firstAttribute="leading" secondItem="wkt-Mm-2os" secondAttribute="leading" constant="20" id="OQK-ph-eMk"/>
+                            <constraint firstItem="wOc-7c-72G" firstAttribute="leading" secondItem="RD7-kX-lN2" secondAttribute="leading" id="XLk-ZB-FLC"/>
+                            <constraint firstItem="wkt-Mm-2os" firstAttribute="trailing" secondItem="RD7-kX-lN2" secondAttribute="trailing" constant="20" id="aVU-2g-miD"/>
+                            <constraint firstItem="wOc-7c-72G" firstAttribute="trailing" secondItem="RD7-kX-lN2" secondAttribute="trailing" id="pVV-p3-kM4"/>
+                            <constraint firstItem="RD7-kX-lN2" firstAttribute="top" secondItem="wkt-Mm-2os" secondAttribute="top" constant="80" id="ygH-e9-heT"/>
+                            <constraint firstItem="wOc-7c-72G" firstAttribute="top" secondItem="RD7-kX-lN2" secondAttribute="bottom" constant="19" id="zRg-IN-aYb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wkt-Mm-2os"/>
+                    </view>
+                    <connections>
+                        <outlet property="produto2Label" destination="wOc-7c-72G" id="MSN-Hb-Ovh"/>
+                        <outlet property="produtoLabel" destination="RD7-kX-lN2" id="kbw-Mw-L7n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8zI-dq-mWB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="953.62318840579712" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
