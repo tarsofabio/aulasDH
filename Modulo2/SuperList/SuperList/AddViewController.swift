@@ -13,45 +13,53 @@ import UIKit
 
 
 protocol AddViewControllerProtocol: class {
-    
     func successAddProduto(array: [Produto])
-    
 }
 
 
 class AddViewController: UIViewController {
-
+    
     @IBOutlet weak var produtoTextField: UITextField!
     @IBOutlet weak var precoTextField: UITextField!
     @IBOutlet weak var cadastrarButton: UIButton!
+    
+    @IBOutlet weak var produtosTableView: UITableView!
+    @IBOutlet weak var categoriaSegmented: UISegmentedControl!
     
     weak var delegate: AddViewControllerProtocol?
     
     private var arrayProdutos: [Produto] = []
     private var categoriaSelected: Categoria = .limpeza
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.cadastrarButton.isEnabled = false
         self.produtoTextField.delegate = self
         self.precoTextField.delegate = self
         
+        self.produtosTableView.delegate = self
+        self.produtosTableView.dataSource = self
+        self.categoriaSegmented.selectedSegmentIndex = -1
+        
         // Do any additional setup after loading the view.
     }
-   
+    
     
     @IBAction func tappedCategoriaButton(_ sender: UISegmentedControl) {
         
         if sender.selectedSegmentIndex == 0 {
-                self.categoriaSelected = .alimento
+            self.categoriaSelected = .alimento
         }else{
-                self.categoriaSelected = .limpeza
+            self.categoriaSelected = .limpeza
         }
-            
-            print(self.categoriaSelected)
-            print(sender.selectedSegmentIndex)
+        
+        self.produtoTextField.resignFirstResponder()
+        self.precoTextField.resignFirstResponder()
+        
+        print(self.categoriaSelected)
+        print(sender.selectedSegmentIndex)
     }
     
     
@@ -66,6 +74,8 @@ class AddViewController: UIViewController {
         self.produtoTextField.text = nil
         self.precoTextField.text = nil
         self.cadastrarButton.isEnabled = false
+        
+        self.produtosTableView.reloadData()
         
         self.delegate?.successAddProduto(array: self.arrayProdutos)
         
@@ -95,3 +105,23 @@ extension AddViewController: UITextFieldDelegate {
         }
     }
 }
+
+
+extension AddViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.arrayProdutos.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        
+        cell.textLabel?.text = self.arrayProdutos[indexPath.row].nome
+        cell.detailTextLabel?.text = self.arrayProdutos[indexPath.row].preco
+        
+        return cell
+    }
+    
+    
+    
+}
+

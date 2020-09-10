@@ -82,7 +82,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="O4k-a4-Zpb">
-                                <rect key="frame" x="20" y="141" width="374" height="204"/>
+                                <rect key="frame" x="20" y="141" width="374" height="725"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Produto" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RmM-Cm-wmE">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
@@ -115,11 +115,47 @@
                                             <action selector="tappedCadastrarButton:" destination="QhA-cG-BfX" eventType="touchUpInside" id="6Qk-0q-K7W"/>
                                         </connections>
                                     </button>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="01Y-b3-NFo">
+                                        <rect key="frame" x="0.0" y="229" width="374" height="496"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="bF4-QM-fFN" detailTextLabel="fHL-LN-mh0" style="IBUITableViewCellStyleSubtitle" id="njb-P2-qWr">
+                                                <rect key="frame" x="0.0" y="28" width="374" height="55.5"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="njb-P2-qWr" id="NKx-21-fUJ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="55.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bF4-QM-fFN">
+                                                            <rect key="frame" x="20" y="10" width="33.5" height="20.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fHL-LN-mh0">
+                                                            <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="01Y-b3-NFo" secondAttribute="bottom" id="FPv-Oo-6Mj"/>
+                                    <constraint firstAttribute="trailing" secondItem="01Y-b3-NFo" secondAttribute="trailing" id="NTV-iT-Tll"/>
+                                    <constraint firstItem="01Y-b3-NFo" firstAttribute="leading" secondItem="O4k-a4-Zpb" secondAttribute="leading" id="oxj-su-EwQ"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="O4k-a4-Zpb" secondAttribute="bottom" constant="-4" id="5Sm-GZ-dJO"/>
                             <constraint firstItem="O4k-a4-Zpb" firstAttribute="leading" secondItem="0Ho-eF-d32" secondAttribute="leading" constant="20" id="8jd-Bh-vVE"/>
                             <constraint firstItem="0Ho-eF-d32" firstAttribute="trailing" secondItem="O4k-a4-Zpb" secondAttribute="trailing" constant="20" id="gcg-1S-riG"/>
                             <constraint firstItem="O4k-a4-Zpb" firstAttribute="top" secondItem="0Ho-eF-d32" secondAttribute="top" constant="53" id="qQH-5z-T1R"/>
@@ -129,8 +165,10 @@
                     <navigationItem key="navigationItem" title="Produto" id="2Rm-Ip-CZD"/>
                     <connections>
                         <outlet property="cadastrarButton" destination="P7M-lx-SHJ" id="svU-8b-YLV"/>
+                        <outlet property="categoriaSegmented" destination="3DB-1l-LwX" id="xS0-bD-dpN"/>
                         <outlet property="precoTextField" destination="19M-D2-tXC" id="p8M-P9-uqb"/>
                         <outlet property="produtoTextField" destination="RmM-Cm-wmE" id="h7l-1f-PYp"/>
+                        <outlet property="produtosTableView" destination="01Y-b3-NFo" id="SFd-UK-Q5d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pxj-gc-bcs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
