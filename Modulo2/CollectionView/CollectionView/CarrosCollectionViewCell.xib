@@ -57,7 +57,7 @@
                 <outlet property="carroimageView" destination="CfY-ri-Kbz" id="hWJ-aq-xfw"/>
                 <outlet property="modeloLabel" destination="nfo-Uh-i9N" id="mfd-mc-k7M"/>
             </connections>
-            <point key="canvasLocation" x="-72" y="29"/>
+            <point key="canvasLocation" x="-1614" y="-12"/>
         </collectionViewCell>
     </objects>
 </document>

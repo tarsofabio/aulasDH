@@ -39,17 +39,42 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HQO-8x-bBG">
+                                <rect key="frame" x="0.0" y="450" width="414" height="372"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CFY-7t-bI0">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell2" id="hC3-lU-PRa">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bav-7x-lP8">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="HQO-8x-bBG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9Sq-jH-pOc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HQO-8x-bBG" secondAttribute="bottom" constant="40" id="Bh5-cA-vu4"/>
+                            <constraint firstItem="HQO-8x-bBG" firstAttribute="top" secondItem="8XV-0Z-ahL" secondAttribute="bottom" constant="106" id="C56-6N-li5"/>
                             <constraint firstItem="8XV-0Z-ahL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="FYb-oy-qmm"/>
                             <constraint firstItem="8XV-0Z-ahL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HU0-dH-ei5"/>
                             <constraint firstItem="8XV-0Z-ahL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Vha-uZ-xFg"/>
+                            <constraint firstItem="HQO-8x-bBG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mQu-YJ-qYf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="myCollectionView" destination="8XV-0Z-ahL" id="Fge-MD-zQs"/>
+                        <outlet property="myCollectionView2" destination="HQO-8x-bBG" id="hUe-9P-JbW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

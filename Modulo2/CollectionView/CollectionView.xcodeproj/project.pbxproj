@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E514C6A5250AE3680038AC5C /* Moto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514C6A4250AE3680038AC5C /* Moto.swift */; };
 		E55DA693250AA76A00FE56FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55DA692250AA76A00FE56FF /* AppDelegate.swift */; };
 		E55DA695250AA76A00FE56FF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55DA694250AA76A00FE56FF /* SceneDelegate.swift */; };
 		E55DA697250AA76A00FE56FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55DA696250AA76A00FE56FF /* ViewController.swift */; };
@@ -16,9 +17,12 @@
 		E55DA6A8250AAD2C00FE56FF /* CarrosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55DA6A6250AAD2C00FE56FF /* CarrosCollectionViewCell.swift */; };
 		E55DA6A9250AAD2C00FE56FF /* CarrosCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E55DA6A7250AAD2C00FE56FF /* CarrosCollectionViewCell.xib */; };
 		E55DA6AB250AC49C00FE56FF /* Carro.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55DA6AA250AC49C00FE56FF /* Carro.swift */; };
+		E5A63EFB250AE0F600D1CE50 /* MotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A63EF9250AE0F600D1CE50 /* MotosCollectionViewCell.swift */; };
+		E5A63EFC250AE0F600D1CE50 /* MotosCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5A63EFA250AE0F600D1CE50 /* MotosCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E514C6A4250AE3680038AC5C /* Moto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moto.swift; sourceTree = "<group>"; };
 		E55DA68F250AA76A00FE56FF /* CollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E55DA692250AA76A00FE56FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E55DA694250AA76A00FE56FF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +34,8 @@
 		E55DA6A6250AAD2C00FE56FF /* CarrosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrosCollectionViewCell.swift; sourceTree = "<group>"; };
 		E55DA6A7250AAD2C00FE56FF /* CarrosCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarrosCollectionViewCell.xib; sourceTree = "<group>"; };
 		E55DA6AA250AC49C00FE56FF /* Carro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carro.swift; sourceTree = "<group>"; };
+		E5A63EF9250AE0F600D1CE50 /* MotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotosCollectionViewCell.swift; sourceTree = "<group>"; };
+		E5A63EFA250AE0F600D1CE50 /* MotosCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MotosCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,10 +72,13 @@
 				E55DA694250AA76A00FE56FF /* SceneDelegate.swift */,
 				E55DA696250AA76A00FE56FF /* ViewController.swift */,
 				E55DA698250AA76A00FE56FF /* Main.storyboard */,
+				E5A63EF9250AE0F600D1CE50 /* MotosCollectionViewCell.swift */,
+				E5A63EFA250AE0F600D1CE50 /* MotosCollectionViewCell.xib */,
 				E55DA6A6250AAD2C00FE56FF /* CarrosCollectionViewCell.swift */,
 				E55DA6A7250AAD2C00FE56FF /* CarrosCollectionViewCell.xib */,
 				E55DA69B250AA76C00FE56FF /* Assets.xcassets */,
 				E55DA6AA250AC49C00FE56FF /* Carro.swift */,
+				E514C6A4250AE3680038AC5C /* Moto.swift */,
 				E55DA69D250AA76C00FE56FF /* LaunchScreen.storyboard */,
 				E55DA6A0250AA76C00FE56FF /* Info.plist */,
 			);
@@ -136,6 +145,7 @@
 			files = (
 				E55DA69F250AA76C00FE56FF /* LaunchScreen.storyboard in Resources */,
 				E55DA69C250AA76C00FE56FF /* Assets.xcassets in Resources */,
+				E5A63EFC250AE0F600D1CE50 /* MotosCollectionViewCell.xib in Resources */,
 				E55DA6A9250AAD2C00FE56FF /* CarrosCollectionViewCell.xib in Resources */,
 				E55DA69A250AA76A00FE56FF /* Main.storyboard in Resources */,
 			);
@@ -148,9 +158,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E514C6A5250AE3680038AC5C /* Moto.swift in Sources */,
 				E55DA697250AA76A00FE56FF /* ViewController.swift in Sources */,
 				E55DA693250AA76A00FE56FF /* AppDelegate.swift in Sources */,
 				E55DA6A8250AAD2C00FE56FF /* CarrosCollectionViewCell.swift in Sources */,
+				E5A63EFB250AE0F600D1CE50 /* MotosCollectionViewCell.swift in Sources */,
 				E55DA695250AA76A00FE56FF /* SceneDelegate.swift in Sources */,
 				E55DA6AB250AC49C00FE56FF /* Carro.swift in Sources */,
 			);
